@@ -6,17 +6,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holy Sheet</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/macro.css') }}" />
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <style>
+      .wrapper {
+        max-width: 900px !important;
+      }
+
+      .dropbox {
+        border-style: dashed !important;
+        border-width: 4px !important;
+      }
+      .flex-center {
+        justify-content: center !important;
+        align-items: center !important;
+      }
+    </style>
   </head>
   <body>
-    <div class="main-layout">
-      <div class="sidebar-primary">{{ sidebar_tool('1') }} {{ sidebar_tool('2') }}</div>
-      <div class="sidebar-secondary"></div>
-      <div class="platform">
-        <h1>Platform</h1>
+    <div class="wrapper container-md p-0 mt-5">
+      <div class="container-sm flex-column gap-2">
+        <h2>Getting started &#128075;</h2>
+        <p class="lead">Clean your data, one step at a time.</p>
+        <div class="d-flex flex-center p-5 border rounded-4 bg-light dropbox">
+          <button class="btn btn-primary px-4 py-2 fw-medium">Upload a file</button>
+        </div>
       </div>
     </div>
   </body>
