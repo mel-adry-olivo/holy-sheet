@@ -36,6 +36,10 @@
         cursor: pointer;
         background-color: beige;
       }
+
+      .dropbox {
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -44,10 +48,10 @@
         <h2>Getting started &#128075;</h2>
         <p class="lead mb-4">Upload your dataset to get started.</p>
         <div class="d-flex flex-center p-5 mb-3 border rounded-5 bg-light dropbox">
-          <button id="uploadButton" class="btn btn-primary btn-lg d-flex gap-2 px-3 py-2 fw-medium">
+          <!-- <button id="uploadButton" class="btn btn-primary btn-lg d-flex gap-2 px-3 py-2 fw-medium">
             <i class="bi bi-upload"></i>
             <span>Upload</span>
-          </button>
+          </button> -->
           <input type="file" id="fileInput" hidden />
         </div>
         <div id="table-container" class=""></div>
@@ -58,7 +62,7 @@
       const fileInput = document.getElementById('fileInput');
       const responseText = document.getElementById('responseText');
 
-      uploadButton.addEventListener('click', () => {
+      document.querySelector('.dropbox').addEventListener('click', () => {
         fileInput.click();
       });
 
